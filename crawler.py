@@ -203,7 +203,7 @@ html_template = """<html>"""
 html_template += headStyle
 html_template += """<body>
 {res}
-<input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+<input type="button" id='script' name="next page" value=" Run Script " onclick="goPython()">
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
  
