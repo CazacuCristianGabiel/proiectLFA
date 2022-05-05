@@ -1,0 +1,36 @@
+<html>
+  <head><style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+    <body>
+<h2>bmw </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>servomotor</td><td>0</td></tr><tr style="border:1px solid black;"><td>reductor</td><td>0</td></tr><tr style="border:1px solid black;"><td>echivalente</td><td>0</td></tr><tr style="border:1px solid black;"><td>clima</td><td>0</td></tr><tr style="border:1px solid black;"><td>player</td><td>0</td></tr><tr style="border:1px solid black;"><td>piese</td><td>11</td></tr><tr style="border:1px solid black;"><td>slim</td><td>0</td></tr><tr style="border:1px solid black;"><td>Lumini</td><td>0</td></tr><tr style="border:1px solid black;"><td>încălzite</td><td>0</td></tr><tr style="border:1px solid black;"><td>Volan</td><td>0</td></tr><tr style="border:1px solid black;"><td>fabricație</td><td>0</td></tr><tr style="border:1px solid black;"><td>repar</td><td>0</td></tr></table><h2>Fiat </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>Scudo</td><td>0</td></tr><tr style="border:1px solid black;"><td>Jumpy</td><td>0</td></tr><tr style="border:1px solid black;"><td>este</td><td>2</td></tr><tr style="border:1px solid black;"><td>motorizarile</td><td>0</td></tr><tr style="border:1px solid black;"><td>lonjeron</td><td>0</td></tr><tr style="border:1px solid black;"><td>telescop</td><td>0</td></tr><tr style="border:1px solid black;"><td>senzor</td><td>0</td></tr><tr style="border:1px solid black;"><td>masiniii</td><td>0</td></tr><tr style="border:1px solid black;"><td>Citroen</td><td>0</td></tr><tr style="border:1px solid black;"><td>airbag</td><td>0</td></tr></table><h2>Mercedes </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>bara</td><td>0</td></tr><tr style="border:1px solid black;"><td>pret</td><td>7</td></tr><tr style="border:1px solid black;"><td>culoare</td><td>1</td></tr><tr style="border:1px solid black;"><td>mercedes</td><td>0</td></tr><tr style="border:1px solid black;"><td>servomotor</td><td>0</td></tr></table>
+<input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ 
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "crawler.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+    </body></html>
