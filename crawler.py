@@ -206,7 +206,7 @@ html_template += """<body>
 {res}
 <br><br>
 
-<h4> 1 </h4> 
+<h4>First page 1 </h4> 
 <div style=" display: flex;
   flex-direction: row;">
 <input type="button" id='script' name="scriptbutton" value=" Next Page " onclick="goPython()">
@@ -215,7 +215,7 @@ html_template += """<body>
 
 """.format(res=res)
 html_template += """
-<h4> currentPage: {currentPage}</h4> 
+<h4> Current Page: {currentPage}</h4> 
 </div>
  """.format(currentPage=currentPage)
 html_template += """
