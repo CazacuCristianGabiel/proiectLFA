@@ -1,18 +1,11 @@
+import string
+
 import requests
-import lxml
 from bs4 import BeautifulSoup
-# from mako.template import Template
-from mako.template import Template
+
 from category_model import categories
 import re
-# import module
 import webbrowser, os
-
-import subprocess
-
-# in case chrome browser
-
-# open html file
 
 url = 'https://www.olx.ro/d/piese-auto/'
 
@@ -26,6 +19,7 @@ htmlFile = 'olx_piese.html'
 filePath = 'file://' + os.path.realpath(htmlFile)
 dataString = ""
 maxPageNumber = 1
+currentPage = 1
 filterCount = 10
 displayNonFound = True
 
@@ -55,6 +49,7 @@ usedLinks.add('/d/piese-auto/')
 
 def visitPages(currentPage):
     global usedLinks
+    global maxPageNumber
     myUrl = url[:18] + currentPage
     f = requests.get(myUrl)
     newSoup = BeautifulSoup(f.content, 'lxml')
@@ -67,10 +62,16 @@ def visitPages(currentPage):
     for newPage in toBeVisited:
         newToVisit.add(newPage['href'])
 
-    # for nextPage in newToVisit:
-    #     if nextPage not in usedLinks:
-    #         usedLinks.add(nextPage)
-    #         visitPages(nextPage)
+    for nextPage in newToVisit:
+        res = nextPage.split('page=')
+        ind: str = (res[len(res) - 1])
+
+        if ind.isnumeric():
+            maxPageNumber = max(maxPageNumber, int(ind))
+        if nextPage not in usedLinks:
+            print(nextPage)
+            usedLinks.add(nextPage)
+            # visitPages(nextPage)
 
 
 def isNullOrEmpty(str):
@@ -203,12 +204,24 @@ html_template = """<html>"""
 html_template += headStyle
 html_template += """<body>
 {res}
-<input type="button" id='script' name="next page" value=" Run Script " onclick="goPython()">
+<br><br>
+
+<h4> 1 </h4> 
+<div style=" display: flex;
+  flex-direction: row;">
+<input type="button" id='script' name="scriptbutton" value=" Next Page " onclick="goPython()">
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
- 
+
 """.format(res=res)
-ddd = """    <script>
+html_template += """
+<h4> currentPage: {currentPage}</h4> 
+</div>
+ """.format(currentPage=currentPage)
+html_template += """
+ <h4>Last page: {maxPageNumber} </h4> 
+""".format(maxPageNumber=maxPageNumber)
+ddd = """<script>
         function goPython(){
             $.ajax({
               url: "crawler.py",
@@ -218,14 +231,17 @@ ddd = """    <script>
             });
         }
     </script>
+    
     """
 html_template += ddd
-html_template += "</body></html>"
+html_template += "<br><br></body></html>"
 
 f.write(html_template)
 
 f.close()
 
 webbrowser.open(filePath)
+
+print(maxPageNumber)
 
 # pip install BeautifulSoup4
