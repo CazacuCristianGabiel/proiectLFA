@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "title": "bmw",
+      "subCategories": [
+        "servomotor",
+        "reductor",
+        "echivalente",
+        "clima",
+        "player",
+        "piese",
+        "slim",
+        "Lumini",
+        "încălzite",
+        "Volan",
+        "fabricație",
+        "repar"
+      ]
+    },
+    {
+      "title": "Fiat",
+      "subCategories": [
+        "Scudo",
+        "Jumpy",
+        "este",
+        "motorizarile",
+        "lonjeron",
+        "telescop",
+        "senzor",
+        "masiniii",
+        "Citroen",
+        "airbag"
+      ]
+    },
+    {
+      "title": "Mercedes",
+      "subCategories": [
+        "bara",
+        "pret",
+        "culoare",
+        "mercedes",
+        "servomotor"
+      ]
+    }
+  ]
+}
