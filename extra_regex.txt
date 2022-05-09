@@ -1,0 +1,25 @@
+
+(\d{3})[/\.\s](\d+)(\.|/|\s*[rR])(\d{2})[\W\.] pt anvelope dimensiuni
+(\d+),?.?(\d*)\s*([dD][eE]\s*)?([lL][eE][iI]+|[rR][oO][nN]|\/[bB][uU][cC]|[eE][uU][rR][Oo])+\s*\D preturi
+\W[vV][aA][rR][aAăĂ]+\W vara
+\W[iI][aA][rR][nN][aAăĂ]\W iarna
+\W[aA][lL]+[-\s][sS]?[eE][aA]?[sS][oO0][Nn]\W allseasons
+\W[mM][\s+][sS]\W m+s
+
+[pP][rR][oO][fF][iI][lL]([uU][lL])?\s*([dD][eE]\s*|[rR][aAăĂ][mM][aA][sS]\s*|[cC][cC][aA]\s*|\d*x\d*\-\s*|\-\s*|:\s*)*(\d)([\.\-,]\d)?\s*[mM]+ 
+profil 
+multithreading- thread pull executer
+
+[A(\Wa)][uU][Dd][iI]+[^a-z] audi
+
+[M(\Wm)][eE][rR][CctTțȚ][eE][dD][eE][sSzZ][^a-z] mercedes
+
+[S(\Ws)][cCKk][oO][dD][aA]+[^a-z] skoda
+
+([FVW]|([^a-z]|^)v|([^a-z]|^)w|([^a-z]|^)f)[oO0][lL]([țȚtTsS]+|[cCkK][sS])[vVwW][aA][gG][eEaAăĂÂâ][nN][^a-z] volkswagen
+
+[cC][oO][mM][pP][aA][tT][iI][bB][iI][lL][iI][tT][Aa][Tt][Ee]:?[ ]*([A-Z]?[a-z]*)[\WA-Z] altele kind-of 
+
+(N|([^a-z]|^)n)[oO][uUiIaAăĂ]+[^a-z] nou
+
+((S|[^a-z]s)[eE][cC][oO][nN][dD][\s-,\.]*[hH][aAeE][nN][dD][^a-z]|(M|([^a-z]|^)m)[aAâÂîÎ][nN][aAăĂ]+([aA\s\-]+)?[dD][oO]([uU][aA]|[iI]+)) mana a doua
