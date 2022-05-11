@@ -1,0 +1,42 @@
+<html>
+  <head><style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+    <body>
+<h2>Compatibilitate </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>Audi</td><td>3</td></tr><tr style="border:1px solid black;"><td>Mercedes</td><td>3</td></tr><tr style="border:1px solid black;"><td>Skoda</td><td>4</td></tr><tr style="border:1px solid black;"><td>Volkswagen</td><td>14</td></tr><tr style="border:1px solid black;"><td>Altele</td><td>1</td></tr></table><h2>Tipuri anvelope </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>Vara</td><td>0</td></tr><tr style="border:1px solid black;"><td>Iarna</td><td>0</td></tr><tr style="border:1px solid black;"><td>All-seasons</td><td>0</td></tr><tr style="border:1px solid black;"><td>Mud+Snow</td><td>0</td></tr></table><h2>Latime anvelope </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>100-150 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>150-200 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>200-250 milimetri</td><td>2</td></tr><tr style="border:1px solid black;"><td>250-300 milimetri</td><td>0</td></tr></table><h2>Diametrul rotii </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>12-14 inch</td><td>0</td></tr><tr style="border:1px solid black;"><td>15-19 inch</td><td>2</td></tr><tr style="border:1px solid black;"><td>20 inch si peste</td><td>0</td></tr></table><h2>Preturi </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>50 lei si sub</td><td>3</td></tr><tr style="border:1px solid black;"><td>50-250 lei</td><td>1</td></tr><tr style="border:1px solid black;"><td>250-500 lei</td><td>0</td></tr><tr style="border:1px solid black;"><td>500-1000 lei</td><td>1</td></tr><tr style="border:1px solid black;"><td>1000-5000 lei</td><td>0</td></tr><tr style="border:1px solid black;"><td>5000+ lei</td><td>0</td></tr></table><h2>Profil anvelope </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>4 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>5 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>6 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>7 milimetri</td><td>0</td></tr><tr style="border:1px solid black;"><td>8 milimetri</td><td>0</td></tr></table><h2>Stare piese </h2><table style="width:100% border:1px solid black;"><tr style="border:1px solid black;"><td>Noi</td><td>9</td></tr><tr style="border:1px solid black;"><td>Second-hand</td><td>4</td></tr></table>
+<br><br>
+<h4>First page 1 </h4>
+<div style=" display: flex;
+  flex-direction: row;">
+<input type="button" id='script' name="scriptbutton" value=" Next Page " onclick="goPython()">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<h4> Current Page: 1</h4>
+</div>
+ 
+ <h4>Last page: 25 </h4>
+<script>
+        function goPython(){
+            $.ajax({
+              url: "crawler.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+
+    <br><br></body></html>

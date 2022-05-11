@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "title": "Compatibilitate",
+      "regularExpression": ["[A(\\Wa)][uU][Dd][iI]+[^a-z]",
+                            "[M(\\Wm)][eE][rR][CctTțȚ][eE][dD][eE][sSzZ][^a-z]",
+                            "[S(\\Ws)][cCKk][oO][dD][aA]+[^a-z]",
+                            "([FVW]|([^a-z]|^)v|([^a-z]|^)w|([^a-z]|^)f)[oO0][lL]([țȚtTsS]+|[cCkK][sS])[vVwW][aA][gG][eEaAăĂÂâ][nN][^a-z]",
+                            "[cC][oO][mM][pP][aA][tT][iI][bB][iI][lL][iI][tT][Aa][Tt][Ee]:?[ ]*([A-Z]?[a-z]*)[\\WA-Z]"
+                            ],
+      "subCategories": [
+        "Audi",
+        "Mercedes",
+        "Skoda",
+        "Volkswagen",
+        "Altele"
+      ]
+    },
+    {
+    "title": "Tipuri anvelope",
+    "regularExpression":["\\W[vV][aA][rR][aAăĂ]+\\W", "\\W[iI][aA][rR][nN][aAăĂ]\\W", "\\W[aA][lL]+[-\\s][sS]?[eE][aA]?[sS][oO0][Nn]\\W",
+    "\\W[mM][\\s+][sS]\\W"
+    ],
+    "subCategories":[
+    "Vara",
+    "Iarna",
+    "All-seasons",
+    "Mud+Snow"
+    ]
+    },
+    {
+    "title":"Latime anvelope",
+    "regularExpression":["(\\d{3})[/\\.\\s](\\d+)(\\.|/|\\s*[rR])(\\d{2})[\\W\\.]"],
+    "subCategories":[
+       "100-150 milimetri",
+       "150-200 milimetri",
+       "200-250 milimetri",
+       "250-300 milimetri"
+    ]
+    },
+    {
+    "title":"Diametrul rotii",
+    "regularExpression":["(\\d{3})[/\\.\\s](\\d+)(\\.|/|\\s*[rR])(\\d{2})[\\W\\.]"],
+    "subCategories":[
+    "12-14 inch",
+    "15-19 inch",
+    "20 inch si peste"
+    ]
+    },
+    {
+    "title":"Preturi",
+    "regularExpression":["(\\d+),?.?(\\d*)\\s*([dD][eE]\\s*)?([lL][eE][iI]+|[rR][oO][nN]|\\/[bB][uU][cC]|[eE][uU][rR][Oo])+\\s*\\D"],
+    "subCategories":[
+    "50 lei si sub",
+    "50-250 lei",
+    "250-500 lei",
+    "500-1000 lei",
+    "1000-5000 lei",
+    "5000+ lei"
+    ]
+    },
+    {
+      "title": "Profil anvelope",
+      "regularExpression": ["[pP][rR][oO][fF][iI][lL]([uU][lL])?\\s*([dD][eE]\\s*|[rR][aAăĂ][mM][aA][sS]\\s*|[cC][cC][aA]\\s*|\\d*x\\d*\\-\\s*|\\-\\s*|:\\s*)*(\\d)([\\.\\-,]\\d)?\\s*[mM]+"],
+      "subCategories": [
+        "4 milimetri",
+        "5 milimetri",
+        "6 milimetri",
+        "7 milimetri",
+        "8 milimetri"
+      ]
+    },
+    {
+      "title": "Stare piese",
+      "regularExpression": ["(N|([^a-z]|^)n)[oO][uUiIaAăĂ]+[^a-z]","((S|[^a-z]s)[eE][cC][oO][nN][dD][\\s\\-,\\.]*[hH][aAeE][nN][dD][^a-z]|(M|([^a-z]|^)m)[aAâÂîÎ][nN][aAăĂ]+([aA\\s\\-]+)?[dD][oO]([uU][aA]|[iI]+))"],
+      "subCategories": [
+        "Noi",
+        "Second-hand"
+      ]
+    }
+  ]
+}
