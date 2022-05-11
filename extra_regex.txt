@@ -23,3 +23,10 @@ multithreading- thread pull executer
 (N|([^a-z]|^)n)[oO][uUiIaAăĂ]+[^a-z] nou
 
 ((S|[^a-z]s)[eE][cC][oO][nN][dD][\s-,\.]*[hH][aAeE][nN][dD][^a-z]|(M|([^a-z]|^)m)[aAâÂîÎ][nN][aAăĂ]+([aA\s\-]+)?[dD][oO]([uU][aA]|[iI]+)) mana a doua
+
+[aAăĂ][nN][vV][eE]?[lL][oO][pP][\w\S]* anvelope
+[Hh][aAaA][Nn][dD]\w* hand
+[lL][aAăĂ][tTțȚ][iI]?[mM]?[eE]?[aAăĂ][nN][vV][eE]?[lL][oO][pP][\w\S]*latime anvelope,
+[lL][aAăĂ][tTțȚ][iI]?[mM]?[eE]?[aAăĂ][nN][vV][eE]?[lL][oO][pP][\w\S]*latime anvelope,
+[tTțȚ][Ii][Pp]?[\w*\s*\S*]?[\d*]? tip - tipuri - tipul
+ compatibilitate masini si conditie(nou/second hand)
